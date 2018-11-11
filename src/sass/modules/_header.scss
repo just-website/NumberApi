@@ -1,0 +1,13 @@
+@import 'global';
+
+.block__header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $secondary-color;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    .block__title {
+        margin: 0;
+    }
+}

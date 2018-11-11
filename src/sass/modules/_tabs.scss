@@ -1,0 +1,46 @@
+@import 'global';
+
+.tabs {
+    list-style: none;
+    margin: 0;
+    font-size: 0;
+    padding: 0;
+}
+
+.tabs__item {
+    padding: 10px 0;
+    background-color: $secondary-color;
+    font-size: 16px;
+    text-align: center;
+    width: calc(100% / 3);
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 2px solid $secondary-color;
+    position: relative;
+    transition: .25s;
+
+    &.active {
+        transform: scale(.95);
+        transition: .25s;
+    }
+
+    &:hover {
+        background-color: $primary-color;
+        border: 2px solid $secondary-color;
+        box-sizing: border-box;
+        transition: .25s;   
+    }
+
+    &:not(:last-child)::after {
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 30px;
+        content: '';
+        background-color: $primary-color;
+        right: -2.65px;
+        top: 5px;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,55 @@
+@import 'global';
+
+.main {
+    padding-bottom: 20px;
+    
+    .main__input {
+        display: block;
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        border: none;
+        box-sizing: border-box;
+    }
+
+    .main__wrapper {
+        width: 202px;
+        text-align: center;
+    }
+
+    .main__button {
+        box-sizing: border-box;
+        border: 4px solid transparent;
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        outline: none;
+        color: $font-color;
+        background-color: $secondary-color;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: border .25s, font-size .25s;
+        
+        &.active {
+            transition: border .25s, font-size .25s;
+            border: 2px solid $border-color;
+            font-size: 13px;
+        }
+    }
+
+    .main__fact {
+        max-height: 0;
+        transition: max-height 0.25s ease-out;
+        overflow: hidden;
+        margin: 0;
+
+        &.active {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+    }
+
+}
